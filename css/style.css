@@ -1,0 +1,432 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  white-space: nowrap;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.container {
+  margin: auto;
+  width: 1200px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+/*ШАПКА*/
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+}
+.novigation-list {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.novigation-list .novigation-item + .novigation-item {
+  margin-left: 60px;
+}
+.novigation-list .navigation-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contact-link {
+  margin-left: auto;
+  display: flex;
+}
+.contact-link-list {
+  display: block;
+}
+.contact-link-list:not(:last-child) {
+  margin-right: 50px;
+}
+.logo {
+  margin-right: 93px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-web {
+  color: #2196f3;
+}
+.logo-studio {
+  color: #212121;
+}
+.navigation-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+.active {
+  color: #2196f3;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #2196f3;
+}
+
+.tel-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.tel-link:hover,
+.tel-link:focus {
+  color: #2196f3;
+}
+.mail-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.mail-link:hover,
+.mail.link:focus {
+  color: #2196f3;
+}
+/*ГЕРОЙ*/
+.hero {
+  background: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.hero-title {
+  margin: auto;
+  max-width: 696px;
+  height: 120px;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.hero-button {
+  padding: 10px 32px;
+  min-width: 136px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/*ГЛАВНЫЕ ИДЕИ*/
+.idea-list {
+  display: flex;
+  align-items: center;
+}
+.idea-list-item {
+  flex-basis: calc(100% / 4-30px);
+}
+.idea-list .idea-list-item + .idea-list-item {
+  margin-left: 30px;
+}
+.idea {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.idea-list-title {
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+.idea-list-position {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*чЕМ МЫ ЗАНИМАЕМСЯ*/
+.emp-list .emp-list-item + .emp-list-item {
+  margin-left: 30px;
+}
+.emp-list {
+  display: flex;
+}
+.employ {
+  padding-bottom: 94px;
+}
+.emp-title {
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+/*кОМАНДА*/
+.team-section {
+  background: #f5f4fa;
+}
+.team-list-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+}
+.team-content-wraper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.team-list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-title {
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.title-name {
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 10px;
+}
+.team-position {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*ПОДВАЛ*/
+.cont-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #2f303a;
+}
+.logo-footer {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address-link {
+  margin-bottom: 9px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.logo-web-stodio {
+  color: #ffffff;
+}
+.tel-link-footer {
+  margin-bottom: 9px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.mail-link-footer {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+/*PORTFOLIO*/
+.portfolio-list {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/*Novigation*/
+.saction-button {
+  margin-bottom: 34px;
+}
+.novigation-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.hiden {
+  display: none;
+}
+.active {
+  color: #2196f3;
+}
+.novigation-button-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background: #f5f4fa;
+  outline-style: none;
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  cursor: pointer;
+}
+.novigation-button-link:hover,
+.novigation-button-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+.novigation-button .novigation-button-list + .novigation-button-list {
+  margin-left: 8px;
+}
+/*Novigation img*/
+
+.img-title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.img-position {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.novigation-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.novigation-img .img-list {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.img-discriptions {
+  display: block;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
