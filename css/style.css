@@ -68,7 +68,7 @@ body {
   display: flex;
 }
 .contact-link-list {
-  display:block;
+  display: block;
 }
 .contact-link-list:not(:last-child) {
   margin-right: 50px;
@@ -118,21 +118,21 @@ body {
   padding-bottom: 32px;
   align-items: center;
 }
-.icons-nav{
+.icons-nav {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   align-items: center;
-  fill: #2196f3;
+  fill: currentColor;
 }
+
 .tel-link:hover.icons-nav,
-.tel-link:focus.icons-nav, 
+.tel-link:focus.icons-nav,
 .tel-link:hover,
 .tel-link:focus {
   color: #2196f3;
   fill: #2196f3;
 }
-
 
 .mail-link {
   font-family: "Roboto", sans-serif;
@@ -146,9 +146,12 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.mail-link:hover.icons-nav,
+.mail.link:focus.icons-nav,
 .mail-link:hover,
-.mail.link:focus {
+.mail-link:focus {
   color: #2196f3;
+  fill: #2196f3;
 }
 /*ГЕРОЙ*/
 .hero {
@@ -158,9 +161,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: 
-  linear-gradient(rgba(79, 84, 136, 0.4),
-  rgba(47, 48, 58, 0.4)), url(../image/background.jpg);
+  background-image: linear-gradient(
+      rgba(79, 84, 136, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -228,7 +233,7 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
-  /*иконки*/
+/*иконки*/
 .thumb {
   height: 120px;
   background-color: #f5f4fa;
@@ -324,11 +329,11 @@ body {
   color: #757575;
   margin-bottom: 16px;
 }
-  /*иконки*/
-  .icon-item-link{
-    display: flex;
-  }
-.icon-list{
+/*иконки*/
+.icon-item-link {
+  display: flex;
+}
+.icon-list {
   display: flex;
   padding: 0px;
   margin: 0px auto;
@@ -342,21 +347,25 @@ body {
   align-items: center;
   border-radius: 50%;
 }
-.team-icon{
-  fill: #d0daff;
+.team-icon {
+  fill: #757575;
 }
-.icon-item-link:focus,
-.icon-item-link:hover{
-   background-color: #2196f3;
-}
-
-.icon-item-link:hover.team-icon,
-.icon-item-link:focus.team-icon{
+.icon-item-link:hover .team-icon,
+.icon-item-link:focus .team-icon {
   fill: #ffffff;
 }
+.icon-item-link:hover,
+.icon-item-link:focus {
+  background-color: #2196f3;
+}
+
 /*ПАРТНЕРЫ*/
-.partners-title{
-   margin-bottom: 50px;
+.partners {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.partners-title {
+  margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -370,7 +379,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.partners-thumb{
+.partners-thumb {
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -379,12 +388,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-.partners-logo{
+.partners-logo {
   fill: #afb1b8;
 }
-.partners-link :hover.partners-logo{
+.partners-link:hover .partners-logo {
   fill: #2196f3;
 }
+.partners-link:hover .partners-thumb {
+  border: 1px solid #2196f3;
+}
+
 /*ПОДВАЛ*/
 .cont-list:not(:last-child) {
   margin-bottom: 9px;
@@ -435,6 +448,54 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+}
+.invit {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/*иконки*/
+.main-footer {
+  display: flex;
+}
+.icon-list {
+  display: flex;
+}
+.footer-wrap:not(:last-child) {
+  margin-right: 70px;
+}
+.icon-footer-list {
+  display: flex;
+  padding: 0px;
+  margin: 0px auto;
+  justify-content: space-between;
+}
+.icon-footer-link {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.icon-footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-footer {
+  fill: #ffffff;
+}
+.icon-footer-link:hover.icon-footer,
+.icon-footer-link:focus.icon-footer {
+  fill: #ffffff;
+}
+.icon-footer-link:hover,
+.icon-footer-link:focus {
+  background-color: #2196f3;
 }
 /*PORTFOLIO*/
 .portfolio-list {
@@ -523,4 +584,23 @@ body {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+.novigation-button-link:hover,
+.novigation-button-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-color: #2196f3;
+  border-width: 2px;
+  border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.img-card-link {
+  display: block;
+}
+.img-card-link:hover,
+.img-card-link:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
