@@ -382,7 +382,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.partners-list-item {
+
+.partners-logo {
+  fill: currentColor;
+}
+.partners-link {
+  color: #afb1b8;
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -391,20 +396,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-.partners-logo {
-  fill: currentColor;
-}
-.partners-link {
-  display: flex;
-  color: #afb1b8;
-}
 .partners-link:hover,
 .partners-link:focus {
+  border-color: #2196f3;
+}
+.partners-link:hover.partners-logo,
+.partners-link:focus.partners-logo {
   fill: #2196f3;
 }
-.partners-list-item:hover,
-.partners-list-item:focus {
-  border: 1px solid #2196f3;
+.partners-logo:hover,
+.partners-logo:focus {
+  fill: #2196f3;
 }
 
 /*ПОДВАЛ*/
