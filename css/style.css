@@ -63,6 +63,9 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.novigation-item {
+  position: relative;
+}
 .contact-list {
   margin-left: auto;
   display: flex;
@@ -88,6 +91,7 @@ body {
   color: #212121;
 }
 .navigation-link {
+  transition: unset;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -95,6 +99,33 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  left: 0;
+  bottom: -1px;
+  border-radius: 4px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.link .navigation-link {
+  transition: unset;
+}
+.navigation-link:hover::after {
+  opacity: 1;
+}
+.navigation-link:focus::after {
+  opacity: 1;
+}
+.active::after {
+  opacity: 1;
 }
 .active {
   color: #2196f3;
@@ -117,6 +148,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-icon {
   width: 16px;
@@ -146,6 +178,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail-link:hover.contact-icon,
 .mail.link:focus.contact-icon,
@@ -252,6 +285,10 @@ body {
 .emp-list {
   display: flex;
 }
+.emp-list-item {
+  position: relative;
+  text-align: center;
+}
 .employ {
   padding-bottom: 94px;
 }
@@ -265,6 +302,25 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+.overlay-wrapper {
+  position: relative;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 370px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
 }
 /*кОМАНДА*/
 .team-section {
@@ -331,10 +387,6 @@ body {
   margin-bottom: 16px;
 }
 /*иконки*/
-.icon-item-link {
-  display: flex;
-  color: #afb1b8;
-}
 .icon-list {
   display: flex;
   padding: 0px;
@@ -348,6 +400,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  color: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon {
   fill: currentColor;
@@ -395,10 +449,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partners-link:hover,
 .partners-link:focus {
   border-color: #2196f3;
+  color: #2196f3;
 }
 .partners-link:hover.partners-logo,
 .partners-link:focus.partners-logo {
@@ -493,6 +549,7 @@ body {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-footer-item:not(:last-child) {
   margin-right: 10px;
@@ -546,6 +603,8 @@ body {
   border: 1px solid transparent;
   padding: 6px 22px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
 }
 .novigation-button-link:hover,
 .novigation-button-link:focus {
@@ -613,4 +672,36 @@ body {
 .img-card-link:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+.project-img {
+  position: relative;
+  overflow: hidden;
+  perspective: 1000;
+}
+.card-overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  height: 100%;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  overflow: scroll;
+  transform: translateY(100%);
+  opacity: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-card-link:hover.card-overley,
+.img-card-link:focus.card-overley {
+  transform: translateY(0%);
+  opacity: 1;
 }
