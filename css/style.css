@@ -29,6 +29,11 @@ body {
 .list {
   list-style: none;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   margin: auto;
   width: 1200px;
@@ -668,6 +673,7 @@ body {
 .img-card-link {
   display: block;
 }
+
 .img-card-link:hover,
 .img-card-link:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -676,7 +682,6 @@ body {
 .project-img {
   position: relative;
   overflow: hidden;
-  perspective: 1000;
 }
 .card-overley {
   position: absolute;
@@ -685,23 +690,57 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   height: 100%;
-  padding: 63px 24px;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   overflow: scroll;
-  transform: translateY(100%);
+  transform: rotateY(90deg);
   opacity: 0;
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 .img-card-link:hover.card-overley,
 .img-card-link:focus.card-overley {
-  transform: translateY(0%);
+  transform: rotateY(0deg);
   opacity: 1;
+}
+
+/*модальное окно*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 528px;
+  height: 580px;
+  background: #ffffff;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
