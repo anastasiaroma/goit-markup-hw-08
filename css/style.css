@@ -40,6 +40,19 @@ img {
   padding: 0 15px;
   box-sizing: border-box;
 }
+
+/*скрытые заголовки*/
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /*ШАПКА*/
 .container-header {
   display: flex;
@@ -201,12 +214,13 @@ img {
   margin-right: auto;
   text-align: center;
   background-image: linear-gradient(
-      rgba(79, 84, 136, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(47, 48, 58, 40%),
+      rgba(47, 48, 58, 40%)
     ),
     url(../image/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1600px;
 }
 .hero-title {
   margin: auto;
@@ -292,7 +306,6 @@ img {
 }
 .emp-list-item {
   position: relative;
-  text-align: center;
 }
 .employ {
   padding-bottom: 94px;
@@ -308,10 +321,6 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
-.overlay-wrapper {
-  position: relative;
-  width: 100%;
-}
 .overlay {
   position: absolute;
   bottom: 0;
@@ -326,6 +335,12 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
+}
+.overley-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-align: center;
 }
 /*кОМАНДА*/
 .team-section {
@@ -406,14 +421,10 @@ img {
   align-items: center;
   border-radius: 50%;
   color: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon {
   fill: currentColor;
-}
-.icon-item-link:hover .team-icon,
-.icon-item-link:focus .team-icon {
-  fill: #ffffff;
 }
 .icon-item-link:hover,
 .icon-item-link:focus {
@@ -454,7 +465,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partners-link:hover,
 .partners-link:focus {
@@ -554,7 +565,7 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-footer-item:not(:last-child) {
   margin-right: 10px;
@@ -608,8 +619,7 @@ img {
   border: 1px solid transparent;
   padding: 6px 22px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .novigation-button-link:hover,
 .novigation-button-link:focus {
@@ -699,13 +709,16 @@ img {
   letter-spacing: 0.03em;
   color: #ffffff;
   transform: translateY(100%);
-  opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  opacity: 1;
 }
 .img-card-link :hover .card-overley,
 .img-card-link :focus .card-overley {
   transform: translateY(0%);
   opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 /*модальное окно*/
@@ -726,6 +739,7 @@ img {
   width: 528px;
   height: 580px;
   background: #ffffff;
+  padding: 40px;
 }
 .modal-close-btn {
   position: absolute;
@@ -745,4 +759,126 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+}
+.modal-form-input:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: #2196f3;
+}
+.modal-form-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+.modal-form-message {
+  width: 100%;
+}
+.modal-form-field {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  margin-top: 4px;
+}
+.modal-form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-message:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+.modal-form-check-desk::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.modal-form-term:checked + .modal-form-check-desk::before {
+  background-image: url(../image/agree.svg);
+  background-position: center;
+  background-color: #2196f3;
+  background-repeat: no-repeat;
+}
+.modal-form-check-desk {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.modal-form-term:focus + .modal-form-check-desk::before {
+  border-color: #2196f3;
+}
+.modal-form-btn {
+  padding: 10px 32px;
+  min-width: 136px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: center;
+  margin-top: 30px;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
