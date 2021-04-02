@@ -482,6 +482,9 @@ img {
 }
 
 /*ПОДВАЛ*/
+.footer-wrap {
+  box-sizing: border-box;
+}
 .cont-list:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -507,7 +510,7 @@ img {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: #ffffff;
 }
 .logo-web-stodio {
@@ -542,15 +545,21 @@ img {
   margin-bottom: 20px;
 }
 /*иконки*/
+.cont-icon {
+  display: block;
+  box-sizing: border-box;
+  margin-left: 70px;
+  width: 206px;
+}
 .main-footer {
   display: flex;
 }
 .icon-list {
   display: flex;
 }
-.footer-wrap:not(:last-child) {
-  margin-right: 70px;
-}
+/*.footer-wrap:not(:last-child) {
+  margin-right: 70px;*/
+
 .icon-footer-list {
   display: flex;
   padding: 0px;
@@ -581,7 +590,78 @@ img {
 .icon-footer-link:focus {
   background-color: #2196f3;
 }
-/*PORTFOLIO*/
+/*форма*/
+.footer-form-mail {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-form-wrapper {
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 93px;
+  align-items: baseline;
+}
+.footer-form-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-form-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: #2f303a;
+  color: #ffffff;
+  outline: none;
+  padding-left: 16px;
+}
+.footer-form-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  left: 16px;
+}
+
+.footer-form-btn {
+  margin: 0;
+  align-items: center;
+  min-width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 28px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  background-color: #2196f3;
+  border: 0px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-form-input:focus {
+  border: 1px solid #2196f3;
+}
+.footer-form-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  fill: #ffffff;
+  margin: 0px auto;
+  padding: 0px;
+}
+/*-------------------PORTFOLIO---------------------------*/
 .portfolio-list {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -642,8 +722,8 @@ img {
 .img-position {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-style: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
@@ -778,6 +858,7 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus {
   outline: none;
@@ -817,9 +898,17 @@ img {
   resize: none;
   margin-top: 4px;
   width: 100%;
+  box-sizing: border-box;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-style: 400;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
 }
 .modal-form-message:focus {
   outline: none;
@@ -854,14 +943,17 @@ img {
 .modal-form-btn {
   padding: 10px 32px;
   min-width: 136px;
+  padding: 10px 55px;
+  min-width: 200px;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: bold;
+  font-style: 400;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
   background: #2196f3;
   color: #ffffff;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   cursor: pointer;
   border-radius: 4px;
   align-self: center;
@@ -873,6 +965,9 @@ img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  display: flex;
+  box-sizing: border-box;
   padding-bottom: 12px;
+}
+.modal-form-check-link {
+  color: #2196f3;
 }

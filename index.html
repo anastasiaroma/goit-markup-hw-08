@@ -359,7 +359,7 @@
                 </ul>
             </address>
                 </div>
-            <div class="footer-wrap cont-icon">
+            <div class="cont-icon">
                 <p class="invit">Присоединяйтесь</p>
                 <ul class="icon-footer-list list">
                     <li class="icon-footer-item">
@@ -392,18 +392,30 @@
                     </li>
                 </ul>
                 </div>
+                <div class="footer-form-wrapper">
+                    <p class="footer-form-text">Подписывайтесь на рассылку</p>
+                    <form class="footer-form-mail">
+                        <input type="text" name="user-email" placeholder="E-mail" class="footer-form-input">
+                        <button type="submit" class="footer-form-btn">Подписаться
+                            <svg class="footer-form-icon">
+                                <use href=".//image/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
+                
+                </div>
             </div>
         </footer>
 
         <!--Модальное окно-->
-        <div class="backdrop " data-modal>
+        <div class="backdrop is-hidden " data-modal>
             <div class="modal">
                 <button type="button" class="modal-close-btn" data-modal-close>
                     <svg class="icon-close" width="20px" height="20px">
                         <use href="./image/sprite.svg#icon-close"></use>
                     </svg>
                     </button>
-                    <b class="modal-title">Оставьте свои данные и мы вам перезвоним </b>
+                    <p class="modal-title">Оставьте свои данные и мы вам перезвоним </p>
                     <form action="#" class="modal-form">
                         <label  class="modal-form-field">
                             Имя
@@ -439,12 +451,12 @@
                         </label>
                         <input type="checkbox" id="user-term" name="user-term" class="modal-form-term visually-hidden">
                         <label for="user-term" class="modal-form-check-desk">Соглашаюсь с рассылкой и принимаю&nbsp;
-                            <a href="">Условия договора</a></label>
+                            <a class="modal-form-check-link" href="">Условия договора</a></label>
                         <button type="submit" class="modal-form-btn">Отправить</button>
                     </form>
                 
             </div>
         </div>
-        <!--<script src="./js/modal.js"></script>-->
+        <script src="./js/modal.js"></script>
     </body>
     </html>
