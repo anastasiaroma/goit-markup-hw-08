@@ -640,16 +640,16 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.filters__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
-}
 .hiden {
   display: none;
 }
 .active {
   color: #2196f3;
+}
+.filters__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 .filters__button {
   font-family: "Roboto", sans-serif;
