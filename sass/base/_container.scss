@@ -1,10 +1,38 @@
 .container {
-  margin: auto;
-  width: 1200px;
-  padding: 0 15px;
-  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  .header & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
 }
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .work__container {
+    padding-bottom: 94px;
+  }
+}
+// .container {
+//   margin: auto;
+//   width: 1200px;
+//   padding: 0 15px;
+//   box-sizing: border-box;
+// }
+// .portfolio {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
