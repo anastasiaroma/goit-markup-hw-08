@@ -56,9 +56,7 @@
 }
 
 .social-icon__box {
-  margin: 0 auto 60px;
   max-width: 206px;
-  box-sizing: border-box;
 }
 .footer__container {
   text-align: center;
@@ -101,7 +99,6 @@
 }
 
 .footer-form {
-  display: flex;
   align-items: center;
 }
 .footer-form__box {
@@ -170,17 +167,19 @@
   padding: 0px;
 }
 @media screen and (min-width: 768px) {
-  .footer__container {
+  .footer__wrap {
     display: flex;
+    align-items: center;
+    padding-bottom: 60px;
   }
   .footer-contacts__box {
     margin-right: 165px;
   }
+
   .footer-form__input {
     width: 450px;
   }
   .social-icon__box {
     min-width: 206px;
-    margin: 0;
   }
 }
