@@ -1,3 +1,12 @@
+.team {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #f5f4fa;
+}
+.team__img {
+  width: 100%;
+}
 .team__item {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
@@ -8,12 +17,6 @@
   padding-right: 32px;
   padding-left: 32px;
   text-align: center;
-}
-
-.team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: #f5f4fa;
 }
 
 .team__title {
@@ -98,4 +101,8 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
