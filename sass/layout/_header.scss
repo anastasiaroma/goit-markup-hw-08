@@ -49,7 +49,7 @@
 
   color: #757575;
 }
-.mobile-menu-contact__item :not(:last-child) {
+.mobile-menu-contact__item:not(:last-child) {
   margin-bottom: 32px;
 }
 @media screen and (max-width: 767px) {

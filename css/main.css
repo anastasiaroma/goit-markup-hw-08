@@ -303,7 +303,7 @@ img {
 }
 
 .modal__term:checked + .modal__check-desk::before {
-  background-image: url(../image/agree.svg);
+  background-image: url(../image/logo/agree.svg);
   background-position: center;
   background-color: #2196f3;
   background-repeat: no-repeat;
@@ -405,7 +405,7 @@ img {
   color: #757575;
 }
 
-.mobile-menu-contact__item :not(:last-child) {
+.mobile-menu-contact__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -641,8 +641,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/mobile/hero/header_img.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/mobile/hero/header_img.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/mobile/hero/header_img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mobile/hero/header_img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 480px;
@@ -650,7 +650,7 @@ img {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .general__section {
-    background-image: url("../image/mobile/hero/header_img@2x.jpg");
+    background-image: url(../image/mobile/hero/header_img@2x.jpg);
   }
 }
 
@@ -686,13 +686,13 @@ img {
 @media screen and (min-width: 768px) {
   .general__section {
     max-width: 1199px;
-    background-image: url("../image/tablet/hero/header.img.jpg");
+    background-image: url(../image/tablet/hero/header.img.jpg);
   }
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .general__section {
-    background-image: url("../image/tablet/hero/header.img@2x.jpg");
+    background-image: url(../image/tablet/hero/header.img@2x.jpg);
   }
 }
 
