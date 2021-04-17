@@ -56,6 +56,9 @@
 }
 
 .social-icon__box {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
   max-width: 206px;
 }
 .footer__container {
