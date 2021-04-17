@@ -13,7 +13,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../image/background/mobile_header img.jpg");
+    url("../image/background/mobile_header_img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 480px;
@@ -22,7 +22,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .general__section {
-    background-image: url("../image/background/mobile_header img@2x.jpg");
+    background-image: url("../image/background/mobile_header_img@2x.jpg");
   }
 }
 .general__title {
@@ -55,7 +55,7 @@
 @media screen and (min-width: 768px) {
   .general__section {
     max-width: 1199px;
-    background-image: url("../image/background/tablet_header img.jpg");
+    background-image: url("../image/background/tablet_header_img.jpg ");
   }
 }
 
@@ -63,7 +63,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .general__section {
-    background-image: url("../image/background/tablet_header img@2x.jpg");
+    background-image: url("../image/background/tablet_header_img@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
