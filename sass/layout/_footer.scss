@@ -1,5 +1,4 @@
 .footer-contacts__box {
-  box-sizing: border-box;
   margin-bottom: 60px;
 }
 .footer-contacts__item:not(:last-child) {
@@ -53,12 +52,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-icon__box {
-  display: flex;
   text-align: center;
-  margin: 0 auto;
   max-width: 206px;
 }
 .footer__container {
@@ -140,8 +138,9 @@
 }
 
 .footer-form__btn {
-  margin: 0;
-  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  display: inline-block;
   align-items: center;
   min-width: 200px;
   height: 50px;
@@ -171,6 +170,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer__wrap {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     padding-bottom: 60px;
