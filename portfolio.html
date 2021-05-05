@@ -12,41 +12,87 @@
 </head>
 <body>
     <!--Шапка сайта-->
-<header class="header">
-    <div class="container">
-        <nav class="navigation">
-            <a class="logo link" href="./index.html"><span class="logo__logo-web">Web</span><span
-                    class="logo__logo-studio">Studio</span> </a>
-            <ul class=" novigation__list list">
-                <li class="novigation__item">
-                    <a class="navigation__link link" href="./index.html">Студия</a>
-                </li>
-                <li class="novigation__item">
-                    <a class="navigation__link link active" href="./portfolio.html"> Портфолио</a>
-                </li>
-                <li class="novigation__item">
-                    <a class="navigation__link link" href="">Контакты</a>
-                </li>
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <a class="logo link" href="./index.html"><span class="logo__logo-web">Web</span><span
+                        class="logo__logo-studio">Studio</span> </a>
+                <ul class=" novigation__list list">
+                    <li class="novigation__item">
+                        <a class="navigation__link link " href="./index.html">Студия</a>
+                    </li>
+                    <li class="novigation__item">
+                        <a class="navigation__link link active" href="./portfolio.html"> Портфолио</a>
+                    </li>
+                    <li class="novigation__item">
+                        <a class="navigation__link link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="contact__list list">
+                <li class="contact__item"><a class="contact__link link" href="mailto:info@devstudio.com">
+                        <svg class="contact__icon">
+                            <use href="./image/sprite.svg#icon-mail"></use>
+                        </svg>
+                        info@devstudio.com</a></li>
+                <li class="contact__item"><a class="contact__link link " href="tel:+380961111111">
+                        <svg class="contact__icon">
+                            <use href="./image/sprite.svg#icon-phone"></use>
+                        </svg>
+                        +38 096 111 11 11</a></li>
             </ul>
-        </nav>
-        <ul class="contact__list list">
-            <li class="contact__item"><a class="contact__link link" href="mailto:info@devstudio.com">
-                    <svg class="contact__icon">
-                        <use href="./image/sprite.svg#icon-mail"></use>
+            <button type="button" class="burger__btn" data-menu-button>
+                <svg class="burger__icon">
+                    <use href="./image/sprite.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" data-menu>
+                <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon">
+                        <use href="./image/sprite.svg#icon-close"></use>
                     </svg>
-                    info@devstudio.com</a></li>
-            <li class="contact__item"><a class="contact__link link " href="tel:+380961111111">
-                    <svg class="contact__icon">
-                        <use href="./image/sprite.svg#icon-phone"></use>
-                    </svg>
-                    +38 096 111 11 11</a></li>
-        </ul>
-    </div>
-</header>
+                </button>
+                <ul class="mobule-menu__list list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link link " href="./index.html">Студия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link link active" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link link">Контакты</a>
+                    </li>
+    
+                </ul>
+                <ul class="mobile-menu-contact__list list">
+                    <li class="mobile-menu-contact__item">
+                        <a class="mobile-menu-contact__link-phone"> +38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-menu-contact__item">
+                        <a class="mobile-menu-contact__link-mail"> info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social list">
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link" target="_blank" rel="noopener noreferrer"> Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <!--Novigation-->
     <main>
         <section class="portfolio ">
-        <div class="container">
+        <div class="container filters__container">
             <h1 class="portfolio__title hiden" >Портфолио</h1>
     <ul class="filters__list list">
         <li class="filters__item">
@@ -70,7 +116,16 @@
         <li class="projects__item">
             <a class="project__link link">
             <div class="project__toomb">
-            <img class="project__img" src= "./image/img1(1).jpg" alt="ноутбук" width="370">
+             <picture>
+                 <source srcset="./image/desktop/portfolio/1/img(1).webp 1x, ./image/desktop/portfolio/1/img@2x(1).webp 2x"  media="(min-width: 1200px)" type="image/webp">
+                 <source srcset="./image/desktop/portfolio/1/img.jpg 1x, ./image/desktop/portfolio/1/img@2x.jpg 2x" media="(min-width: 1200px)"> 
+                 <source srcset="./image/tablet/portfolio/1/img(1).webp 1x, ./image/tablet/portfolio/1/img@2x(1).webp 2x" media="(min-width: 768px)" type="image/webp">
+                 <source srcset="./image/tablet/portfolio/1/img.jpg 1x, ./image/tablet/portfolio/1/img@2x.jpg 2x" media="(min-width: 768px)">
+                 <source srcset="./image/mobile/portfolio/1/img(1).webp 1x, ./image/mobile/portfolio/1/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                 <source srcset="./image/mobile/portfolio/1/img.jpg 1x, ./image/mobile/portfolio/1/img@2x.jpg 2x" media="(min-width: 480px)"> 
+
+            <img class="project__img" src= "./image/img1(1).jpg" alt="ноутбук">
+            </picture>
             <p class="project__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
             шпионажа и атак на защищённые сервера конкурентов</p>
             </div>
@@ -83,7 +138,16 @@
         <li class="projects__item">
             <a class="project__link link">
             <div class="project__toomb">
-            <img class="project__img" src="./image/img1(2).jpg" alt="баскетболисты" >
+            <picture>
+                <source srcset="./image/desktop/portfolio/2/img.webp 1x, ./image/desktop/portfolio/2/img@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/2/img.jpg 1x, ./image/desktop/portfolio/2/img@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/2/img(1).webp 1x, ./image/tablet/portfolio/2/img@2x(1).webp 2x" media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/portfolio/2/img.jpg 1x, ./image/tablet/portfolio/2/img@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/2/img(1).webp 1x, ./image/mobile/portfolio/2/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/2/img.jpg 1x, ./image/mobile/portfolio/2/img@2x.jpg 2x"media="(min-width: 480px)">
+                
+            <img class="project__img" src="./image/img1(2).jpg" alt="баскетболисты">
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
             incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam ratione.</p>
             </div>
@@ -96,7 +160,16 @@
         <li class="projects__item">
             <a class="project__link link">
                 <div class="project__toomb">
+            <picture>
+                <source srcset="./image/desktop/portfolio/3/img(1).webp 1x, ./image/desktop/portfolio/3/img@2x(1).webp 2x" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/3/img.jpg 1x, ./image/desktop/portfolio/3/img@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/3/img(1).webp 1x, ./image/tablet/portfolio/3/img@2x(1).webp 2x"  media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/portfolio/3/img.jpg 1x, ./image/tablet/portfolio/3/img@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/3/img(1).webp 1x, ./image/mobile/portfolio/3/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/3/img.jpg 1x, ./image/mobile/portfolio/3/img@2x.jpg 2x" media="(min-width: 480px)">
+
             <img class="project__img" src="./image/img1(3).jpg" alt="логотип ресторана" >
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                 incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                 ratione.</p>
@@ -110,7 +183,16 @@
         <li class="projects__item">
             <a class="project__link link">
                 <div class="project__toomb">
+            <picture>
+                <source srcset="./image/desktop/portfolio/4/img.webp 1x, ./image/desktop/portfolio/4/img@2x(1).webp 2x" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/4/img.jpg 1x, ./image/desktop/portfolio/4/img@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/4/img(1).webp 1x, ./image/tablet/portfolio/4/img@2x(1).webp 2xjpg" media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/portfolio/4/img.jpg 1x, ./image/tablet/portfolio/4/img@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/4/img(1).webp 1x, ./image/mobile/portfolio/4/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/4/img.jpg 1x, ./image/mobile/portfolio/4/img@2x.jpg 2x" media="(min-width: 480px)">
+
             <img class="project__img" src="./image/img1(4).jpg" alt="наушники" >
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                 incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                 ratione.</p>
@@ -124,7 +206,15 @@
         <li class="projects__item">
             <a class="project__link link">
                 <div class="project__toomb">
+            <picture>
+                <source srcset="./image/desktop/portfolio/5/img.webp 1x, ./image/desktop/portfolio/5/img@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/5/img.jpg 1x, ./image/desktop/portfolio/5/img@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/5/img(1).webp 1x, ./image/tablet/portfolio/5/img@2x(1).webp 2x" media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/igor/img.jpg 1x, ./image/tablet/igor/img@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/5/img(1).webp 1x, ./image/mobile/portfolio/5/img@2x(1).webp"  media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/5/img.jpg 1x, ./image/mobile/portfolio/5/img@2x.jpg 2x" media="(min-width: 480px)">
             <img class="project__img" src="./image/img1(5).jpg" alt="коробки" >
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                 incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                 ratione.</p>
@@ -138,7 +228,16 @@
         <li class="projects__item">
             <a class="project__link link">
                 <div class="project__toomb">
-            <img class="project__img" src="./image/img1(6).jpg" alt="монитор компьютера" width="370">
+            <picture>
+                <source srcset="./image/desktop/portfolio/6/img.webp 1x, ./image/desktop/portfolio/6/img@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/6/img.jpg 1x, ./image/desktop/portfolio/6/img@2x.jpg 2x"  media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/6/img(1).webp 1x, ./image/tablet/portfolio/6/img@2x(1).webp 2x" media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/portfolio/6/img.jpg 1x, ./image/tablet/portfolio/6/img@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/6/img(1).webp 1x, ./image/mobile/portfolio/6/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/6/img.jpg 1x, ./image/mobile/portfolio/6/img@2x.jpg 2x" media="(min-width: 480px)">
+
+            <img class="project__img" src="./image/img1(6).jpg" alt="монитор компьютера">
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                 incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                 ratione.</p>
@@ -152,7 +251,21 @@
         <li class="projects__item">
             <a class="project__link link">
                 <div class="project__toomb">
+            <picture>
+                <source srcset="./image/desktop/portfolio/7/img.webp 1x, ./image/desktopportfolio/7/img@2x.webp 2x"
+                    media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./image/desktop/portfolio/7/img.jpg 1x, ./image/desktop/portfolio/7/img@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                <source srcset="./image/tablet/portfolio/7/img(1).webp 1x, ./image/tablet/portfolio/7/img@2x(1).webp 2x"
+                    media="(min-width: 768px)" type="image/webp">
+                <source srcset="./image/tablet/portfolio/7/img.jpg 1x, ./image/tablet/portfolio/7/img@2xjpg 2x"
+                    media="(min-width: 768px)">
+                <source srcset="./image/mobile/portfolio/7/img(1).webp 1x, ./image/mobile/portfolio/7/img@2x(1).webp 2x"
+                    media="(min-width: 480px)" type="image/webp">
+                <source srcset="./image/mobile/portfolio/7/img.jpg 1x, ./image/mobile/portfolio/7/img@2x.jpg 2x"
+                    media="(min-width: 480px)">
             <img class="project__img" src="./image/img1(7).jpg" alt="книга" width="370">
+            </picture>
             <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                 incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                 ratione.</p>
@@ -166,7 +279,15 @@
         <li class="projects__item"> 
            <a class="project__link link">
                <div class="project__toomb">
+                <picture>
+                    <source srcset="./image/desktop/portfolio/8/img.webp 1x, ./image/desktop/portfolio/8/img@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                    <source srcset="./image/desktop/portfolio/8/img.jpg 1x, ./image/desktop/portfolio/8/img@2x.jpg 2x"  media="(min-width: 1200px)">
+                    <source srcset="./image/tablet/portfolio/8/img(1).webp 1x, ./image/tablet/portfolio/8/img@2x(1).webp 2x" media="(min-width: 768px)" type="image/webp">
+                    <source srcset="./image/table/portfolio/8/img.jpg 1x, ./image/tablet/portfolio/8/img@2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./image/mobile/portfolio/8/img(1).webp 1x, ./image/mobile/portfolio/8/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                    <source srcset="./image/mobile/portfolio/8/img.jpg 1x, ./image/mobile/portfolio/8/img@2x.jpg" media="(min-width: 480px)">
                 <img class="project__img" src="./image/img1(8).jpg" alt="бирка" width="370">
+                </picture>
                 <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
                     incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
                     ratione.</p>
@@ -180,7 +301,15 @@
         <li class="projects__item">
            <a class="project__link link" href="">
                <div class="project__toomb">
+                   <picture>
+                       <source srcset="./image/desktop/portfolio/9/img.webp 1x, ./image/desktop/portfolio/9/img@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                       <source srcset="./image/desktop/portfolio/9/img.jpg 1x, ./image/desktop/portfolio/9/img@2x.jpg 2x" media="(min-width: 1200px)">
+                       <source srcset="./image/tablet/portfolio/9/img(1).webp 1x, ./image/tablet/portfolio/9/img@2x(1).webp" media="(min-width: 768px)" type="image/webp">
+                       <source srcset="./image/tablet/portfolio/9/img.jpg 1x, ./image/tablet/portfolio/9/img@2x.jpg 2x" media="(min-width: 768px)">
+                       <source srcset="./image/mobile/portfolio/9/img(1).webp 1x, ./image/mobile/portfolio/9/img@2x(1).webp 2x" media="(min-width: 480px)" type="image/webp">
+                       <source srcset="./image/mobile/portfolio/9/img.jpg 1x, ./image/mobile/portfolio/9/img@2x.jpg 2x" media="(min-width: 480px)">
          <img class="project__img" src="./image/img1(9).jpg" alt="ноутбук" width="370">
+                    </picture>
         <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod ea pariatur nam adipisci corporis, facilis
             incidunt officia aspernatur dicta non laudantium deleniti numquam eveniet quae atque necessitatibus quibusdam
             ratione.</p>
@@ -198,60 +327,62 @@
         <footer class="footer">
             <div class="container ">
                 <div class="footer__container ">
-                    <div class="footer-contacts__box">
-                        <a class="logo-footer link" href="./index.html"> <span
-                                class="logo-footer__logo-web active">Web</span><span
-                                class="logo-footer__logo-studio">Studio</span> </a>
-                        <address class="footer-contacts__adress">
-                            <ul class="footer-contacts__list list">
-                                <li class="footer-contacts__item">
-                                    <a class=" footer-contacts__link__address  link"
-                                        href="https://goo.gl/maps/ojynZYhiJymS1GTQ6" target="_blank"
-                                        rel="noopener noreferrer">г.
-                                        Киев, пр-т Леси Украинки, 26</a>
+                    <div class="footer__wrap">
+                        <div class="footer-contacts__box">
+                            <a class="logo-footer link" href="./index.html"> <span
+                                    class="logo-footer__logo-web active">Web</span><span
+                                    class="logo-footer__logo-studio">Studio</span> </a>
+                            <address class="footer-contacts__adress">
+                                <ul class="footer-contacts__list list">
+                                    <li class="footer-contacts__item">
+                                        <a class=" footer-contacts__link__address  link"
+                                            href="https://goo.gl/maps/ojynZYhiJymS1GTQ6" target="_blank"
+                                            rel="noopener noreferrer">г.
+                                            Киев, пр-т Леси Украинки, 26</a>
+                                    </li>
+                                    <li class="footer-contacts__item">
+                                        <a class="footer-contacts__link link"
+                                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                    </li>
+                                    <li class="footer-contacts__item">
+                                        <a class="footer-contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                                    </li>
+                                </ul>
+                            </address>
+                        </div>
+                        <div class="social-icon__box">
+                            <p class="social-icon__text">Присоединяйтесь</p>
+                            <ul class="social-icon__list list">
+                                <li class="social-icon__item">
+                                    <a href="" class="social-icon__link link">
+                                        <svg class="social-icon__icon" width="20px" height="20px">
+                                            <use href="./image/sprite.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
                                 </li>
-                                <li class="footer-contacts__item">
-                                    <a class="footer-contacts__link link"
-                                        href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                <li class="social-icon__item">
+                                    <a href="" class="social-icon__link link">
+                                        <svg class="social-icon__icon" width="20px" height="20px">
+                                            <use href="./image/sprite.svg#icon-twit"></use>
+                                        </svg>
+                                    </a>
                                 </li>
-                                <li class="footer-contacts__item">
-                                    <a class="footer-contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                                <li class="social-icon__item">
+                                    <a href="" class="social-icon__link link">
+                                        <svg class="social-icon__icon" width="20px" height="20px">
+                                            <use href="./image/sprite.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-icon__item">
+                                    <a href="" class="social-icon__link link">
+                                        <svg class="social-icon__icon" width="20px" height="20px">
+                                            <use href="./image/sprite.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
-                        </address>
-                    </div>
-                    <div class="social-icon__box">
-                        <p class="social-icon__text">Присоединяйтесь</p>
-                        <ul class="social-icon__list list">
-                            <li class="social-icon__item">
-                                <a href="" class="social-icon__link link">
-                                    <svg class="social-icon__icon" width="20px" height="20px">
-                                        <use href="./image/sprite.svg#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-icon__item">
-                                <a href="" class="social-icon__link link">
-                                    <svg class="social-icon__icon" width="20px" height="20px">
-                                        <use href="./image/sprite.svg#icon-twit"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-icon__item">
-                                <a href="" class="social-icon__link link">
-                                    <svg class="social-icon__icon" width="20px" height="20px">
-                                        <use href="./image/sprite.svg#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-icon__item">
-                                <a href="" class="social-icon__link link">
-                                    <svg class="social-icon__icon" width="20px" height="20px">
-                                        <use href="./image/sprite.svg#icon-linkedin"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                        </div>
                     </div>
         
                     <div class="footer-form__box">
@@ -268,6 +399,7 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/mobal-menu.js"></script>
 
 
 </body>

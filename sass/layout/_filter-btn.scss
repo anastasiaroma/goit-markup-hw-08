@@ -1,7 +1,7 @@
 .filters__list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
 }
 .filters__button {
   font-family: "Roboto", sans-serif;
@@ -30,4 +30,17 @@
 
 .filters__list .filters__item + .filters__item {
   margin-left: 8px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .filters__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters__list {
+    margin-bottom: 50px;
+  }
 }
