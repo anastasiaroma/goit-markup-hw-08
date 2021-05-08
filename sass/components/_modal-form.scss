@@ -80,10 +80,11 @@
 .modal__check-desk {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   &::before {
     display: block;
     content: "";
@@ -102,6 +103,15 @@
     }
     .modal__term:focus + & {
       box-shadow: 0 0 0 2px #2196f3;
+    }
+    @media (min-width: 480px) {
+      font-size: 12px;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
     }
   }
 }
@@ -128,23 +138,4 @@
 
 .modal__check-desk-link {
   color: #2196f3;
-}
-@media screen and (min-width: 460px) {
-  .modal__check-desk {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal__title {
-    font-size: 20px;
-    line-height: 1.15;
-  }
-  .modal__check-desk {
-    font-size: 14px;
-    line-height: 1.71;
-  }
-  .modal__check-desk-link {
-    font-size: 14px;
-    line-height: 1.71;
-  }
 }

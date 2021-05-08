@@ -121,15 +121,12 @@ img {
 }
 
 .modal {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  width: 528px;
-  height: 580px;
-  background: #ffffff;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 4px;
   padding: 40px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1199px) {
@@ -316,10 +313,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .modal__check-desk::before {
@@ -346,6 +346,21 @@ img {
           box-shadow: 0 0 0 2px #2196f3;
 }
 
+@media (min-width: 480px) {
+  .modal__check-desk::before {
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__check-desk::before {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .modal-form__btn {
   padding: 10px 32px;
   min-width: 136px;
@@ -369,30 +384,6 @@ img {
 
 .modal__check-desk-link {
   color: #2196f3;
-}
-
-@media screen and (min-width: 460px) {
-  .modal__check-desk {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal__title {
-    font-size: 20px;
-    line-height: 1.15;
-  }
-  .modal__check-desk {
-    font-size: 14px;
-    line-height: 1.71;
-  }
-  .modal__check-desk-link {
-    font-size: 14px;
-    line-height: 1.71;
-  }
 }
 
 .header {
