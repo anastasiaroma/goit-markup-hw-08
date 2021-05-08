@@ -7,6 +7,20 @@
   height: 580px;
   background: #ffffff;
   padding: 40px;
+  @media (max-width: 1199px) {
+    max-width: 450px;
+    min-height: 609px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    width: 528px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 .modal__btn__close {
   position: absolute;
